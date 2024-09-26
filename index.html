@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Software Developer</title>
+    <style>
+        /* Stile base */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+       header {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Sfondo scuro semi-trasparente */
+    z-index: 1; /* Mette l'overlay sotto il testo */
+}
+
+header h1, header p {
+    position: relative; /* Posiziona il testo sopra l'overlay */
+    z-index: 2;
+}
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #0077b6;
+            border-bottom: 2px solid #0077b6;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+#contacts {
+    position: fixed; /* Rende la sezione fissa */
+    top: 50%; /* Posiziona verticalmente al centro */
+    left: 20px; /* Spazio dal bordo sinistro */
+    transform: translateY(-50%); /* Centra verticalmente l'elemento */
+    background-color: #f9f9f9; /* Colore di sfondo della sezione */
+    padding: 20px; /* Padding interno */
+    text-align: center; /* Centra il testo */
+    border-radius: 8px; /* Angoli arrotondati */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombra per dare profondità */
+    max-width: 300px; /* Larghezza massima per la sezione */
+}
+
+#contacts .profile-pic {
+    width: 100px; /* Larghezza della foto */
+    height: 100px; /* Altezza della foto */
+    border-radius: 50%; /* Rende la foto rotonda */
+    margin-bottom: 10px; /* Margine sotto la foto */
+}
+
+#contacts h2 {
+    margin-bottom: 10px; /* Margine sotto il titolo */
+    color: #333; /* Colore del titolo */
+}
+
+#contacts .profile-pic {
+    width: 150px; /* Larghezza della foto */
+    height: 150px; /* Altezza della foto */
+    border-radius: 50%; /* Rende la foto rotonda */
+    margin-bottom: 20px; /* Margine sotto la foto */
+}
+
+#contacts h2 {
+    margin-bottom: 20px; /* Margine sotto il titolo */
+    color: #333; /* Colore del titolo */
+}
+
+      .github-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.github-link:hover {
+    background-color: #555;
+}
+
+.github-link i {
+    margin-right: 8px; /* Spazio tra l'icona e il testo */
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.project-info {
+    text-align: left;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-info p {
+    color: #555;
+}
+
+
+        /* CV download */
+        #cv a {
+            display: inline-block;
+            background-color: #0288d1;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #cv a:hover {
+            background-color: #0277bd;
+        }
+
+      #appointments {
+    background-color: #f9f9f9; /* Colore di sfondo della sezione */
+    padding: 20px; /* Padding interno */
+    text-align: center; /* Centra il testo */
+    margin: 40px auto; /* Margine verticale e automatico per centrare orizzontalmente */
+    border-radius: 8px; /* Angoli arrotondati */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombra per dare profondità */
+    max-width: 600px; /* Larghezza massima per la sezione */
+}
+
+        /* Footer */
+        footer {
+            background-color: #0077b6;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Layout responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Antro di Cominelli Matteo</h1>
+        <p>Software e Android Developer specializzato in Kotlin e Python. Amo affrontare nuove sfide e sviluppare soluzioni innovative.</p>
+    </header>
+
+    <section id="about">
+        <h2>Chi sono</h2>
+        <p>Sono uno sviluppatore software con esperienza in applicazioni mobile, app e web app. Lavoro per creare applicazioni funzionali e facili da usare.</p>
+        <p>Attualmente sono interessato a nuove opportunità per lavorare su progetti stimolanti e innovativi.</p>
+    </section>
+
+    <section id="contacts">
+    <h2>Contatti</h2>
+    <img src="foto.png" alt="La mia foto" class="profile-pic">
+    <p>Se desideri metterti in contatto con me, puoi farlo attraverso i seguenti canali:</p>
+    <p>Email: met190@hotmail.it</p>
+    <p>Telefono: +39 340 0896 776</p>
+</section>
+
+ <section id="projects">
+    <h2>I Miei Progetti</h2>
+
+    <div class="project">
+        <img src="calcolatrice.jpg" alt="Progetto 1" class="project-image">
+        <div class="project-info">
+            <h3>Calcolatrice Android</h3>
+            <p>Calcolatrice creata con l' uso di Kotlin e JetpackCompose</p>
+            <a href="https://github.com/Pagantiny/CalcolatriceCompose" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> Visualizza su GitHub
+            </a>
+        </div>
+    </div>
+
+    <div class="project">
+        <img src="store.jpg" alt="Progetto 2" class="project-image">
+        <div class="project-info">
+            <h3>petstore</h3>
+            <p>esempio sito web di uno store per animali fatto in python</p>
+            <a href="https://github.com/Pagantiny/petstore" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> Visualizza su GitHub
+            </a>
+        </div>
+    </div>
+
+</section>
+
+    <section id="cv">
+        <h2>Scarica il mio CV</h2>
+        <a href="cvCominelli.pdf" download="cvCominelli.pdf">Scarica il PDF</a>
+    </section>
+
+    <section id="appointments">
+    <h2>Prenota un appuntamento</h2>
+    <!-- Google Calendar Appointment Scheduling begin -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+    <script>
+    (function() {
+        var target = document.currentScript;
+        window.addEventListener('load', function() {
+            calendar.schedulingButton.load({
+                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0AgVC9rkjcB-pNHcQwcGmGbiAaxtoiUj5jVS4l3IDZKmUCeoXAtKa_H1iOvHgjqXBGQuLUUomq?gv=true',
+                color: '#039BE5',
+                label: 'Fissa un appuntamento',
+                target,
+            });
+        });
+    })();
+    </script>
+    <!-- end Google Calendar Appointment Scheduling -->
+</section>
+
+    <footer>
+        <p>Seguimi su:</p>
+        <a href="https://www.linkedin.com/in/matteo-cominelli-35671920b/">LinkedIn</a> |
+        <a href="https://github.com/Pagantiny">GitHub</a>
+    </footer>
+</body>
+</html>
+
